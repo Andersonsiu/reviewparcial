@@ -18,7 +18,7 @@ PROCCES-RUN .PY
 
 ¿Cuánto tardan en completarse ambos procesos? Utiliza-c y-p  para saber si has acertado.
 
-- Tiempo total: 6 unidades de tiempo (4 para CPU, 1 para E/S y 1 para espera de E/S).
+- Tiempo total: 11 unidades de tiempo
 
 ![image.png](https://i.postimg.cc/SN7FYHbs/image.png)
 
