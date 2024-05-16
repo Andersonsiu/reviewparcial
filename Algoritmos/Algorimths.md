@@ -48,10 +48,12 @@ Pregunta: Ejecuta una simulación con cinco trabajos A, B, C, D y E en un sistem
 
 - python3 process-run.py -l 10:100,5:100,7:100,3:100,2:100 --policy SQMS -c -p
 
+![image.png](https://i.postimg.cc/tJZwgmtX/image.png)
+
+
 **Simulación con MQMS**
 
 Pregunta: Ejecuta una simulación similar a la anterior pero utilizando múltiples colas, una por CPU.
 
 - python3 process-run.py -l 10:100,5:100,7:100,3:100,2:100 --policy MQMS -c -p
 
-![image.png](https://i.postimg.cc/tJZwgmtX/image.png)
