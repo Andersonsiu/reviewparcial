@@ -1,4 +1,3 @@
-**DOCKERFILE**
 
 **-CREA EL DOCKERFILE, ASÍ:**
 
