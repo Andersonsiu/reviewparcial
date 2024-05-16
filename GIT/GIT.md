@@ -17,6 +17,7 @@ ENTRAR A LA UBICACIÓN
 - git commit -m “aquí va el texto xd”
 
 - git pust origin master
-
-Poner usuario
-Poner token clasic en setting del github
+  
+- Poner usuario(Andersonsiu)
+  
+- Poner token clasic en setting del github(Ir a settings y generar token)
