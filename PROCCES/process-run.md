@@ -1,20 +1,9 @@
 PROCCES-RUN .PY
 
-**Permite ver cómo cambia el estado de un proceso mientras se ejecuta en una CPU.**
-
-RUNNING
-
-READY
-
-BLOCKED
-
-DONE
-
-
 **HOMEWORK**
 
 
-1. Ejecute process-run.py con las siguientes banderas: -l 5:100,5:100. ¿Cuál debería ser la utilización de la CPU (por ejemplo, el porcentaje de tiempo que la CPU está en uso)? Utiliza las opciones-c y-p para comprobar si has acertado.
+**1. Ejecute process-run.py con las siguientes banderas: -l 5:100,5:100. ¿Cuál debería ser la utilización de la CPU (por ejemplo, el porcentaje de tiempo que la CPU está en uso)? Utiliza las opciones-c y-p para comprobar si has acertado.**
 
 python3 process-run.py -l 5:100,5:100 -c -p
 
@@ -23,7 +12,7 @@ python3 process-run.py -l 5:100,5:100 -c -p
 ![image.png](https://i.postimg.cc/SNpbsk53/image.png)
 
 
-2. Ahora ejecuta con estas banderas: ./process-run.py-l 4:100,1:0.  Estas banderas especifican un proceso con 4 instrucciones (todas para usar la CPU), y otro que simplemente emite una E/S y espera a que termine.
+**2. Ahora ejecuta con estas banderas: ./process-run.py-l 4:100,1:0.  Estas banderas especifican un proceso con 4 instrucciones (todas para usar la CPU), y otro que simplemente emite una E/S y espera a que termine.**
    
 python3 process-run.py -l 4:100,1:0 -c -p
 
@@ -34,13 +23,13 @@ Tiempo total: 6 unidades de tiempo (4 para CPU, 1 para E/S y 1 para espera de E/
 ![image.png](https://i.postimg.cc/SN7FYHbs/image.png)
 
 
-3. Cambia el orden de los procesos:-l 1:0,4:100. ¿Qué ocurre ahora? ¿Es importante cambiar el orden? ¿Por qué? (Como siempre, utiliza-c  y-para ver si tenías razón)
+**3. Cambia el orden de los procesos:-l 1:0,4:100. ¿Qué ocurre ahora? ¿Es importante cambiar el orden? ¿Por qué? (Como siempre, utiliza-c  y-para ver si tenías razón)**
 
 python3 process-run.py -l 1:0,4:100 -c -p
 
 ![image.png](https://i.postimg.cc/FKz2qRdd/image.png)
 
-4.   Ahora exploraremos algunas de las otras banderas. Una bandera importante es-S, que determina cómo reacciona el sistema cuando un proceso es proceso realiza una E/S. Con la bandera fijada a SWITCH ON END, el sistema NO cambiará a otro proceso mientras uno está haciendo una E/S, en en lugar de esperar hasta que el proceso esté completamente terminado. ¿Qué ocurre cuando ejecuta los siguientes dos procesos (-l 1:0,4:100-c-SWITCH ON END), uno haciendo E/S y el otro haciendo trabajo de CPU?
+**4.   Ahora exploraremos algunas de las otras banderas. Una bandera importante es-S, que determina cómo reacciona el sistema cuando un proceso es proceso realiza una E/S. Con la bandera fijada a SWITCH ON END, el sistema NO cambiará a otro proceso mientras uno está haciendo una E/S, en en lugar de esperar hasta que el proceso esté completamente terminado. ¿Qué ocurre cuando ejecuta los siguientes dos procesos (-l 1:0,4:100-c-SWITCH ON END), uno haciendo E/S y el otro haciendo trabajo de CPU?**
 
 **Flags**: **-S SWITCH_ON_END** configura el sistema para no cambiar de proceso mientras uno está haciendo E/S.
 
@@ -51,7 +40,7 @@ Resultado: El proceso de E/S bloquea hasta completar, luego el proceso de CPU ej
 ![image.png](https://i.postimg.cc/qByWWWRL/image.png)
 
 
-5. Ahora, ejecute los mismos procesos, pero con el comportamiento de conmutación establecido para cambiar a otro proceso siempre que uno esté ESPERANDOI/O(-l 1:0,4:100-c-S SWITCH ON E/S). ¿Qué ocurre ahora? Utilice c  y -p para confirmar que has acertado.
+**5. Ahora, ejecute los mismos procesos, pero con el comportamiento de conmutación establecido para cambiar a otro proceso siempre que uno esté ESPERANDOI/O(-l 1:0,4:100-c-S SWITCH ON E/S). ¿Qué ocurre ahora? Utilice c  y -p para confirmar que has acertado.**
 
 python3 process-run.py -l 1:0,4:100 -c -S SWITCH_ON_IO -p
 
@@ -63,7 +52,7 @@ python3 process-run.py -l 3:0,5:100,5:100,5:100 -S SWITCH_ON_IO -c -p -I IO_RUN_
 
 ![image.png](https://i.postimg.cc/CK96Q4pX/image.png)
 
-7. Flags: -I IO_RUN_IMMEDIATE configura el sistema para ejecutar inmediatamente un proceso que completa una E/S.
+**7. Flags: -I IO_RUN_IMMEDIATE configura el sistema para ejecutar inmediatamente un proceso que completa una E/S.**
 
 python3 process-run.py -l 3:0,5:100,5:100,5:100 -S SWITCH_ON_IO -c -p -I IO_RUN_IMMEDIATE
 - Resultado: Mejora la utilización de recursos, procesos ejecutan inmediatamente tras completar E/S.
@@ -71,7 +60,7 @@ python3 process-run.py -l 3:0,5:100,5:100,5:100 -S SWITCH_ON_IO -c -p -I IO_RUN_
 ![image.png](https://i.postimg.cc/kGmYnX4y/image.png)
 
 
-8. Ahora ejecuta con algunos procesos generados aleatoriamente utilizando flags-s 1-l 3:50,3:50 o-s 2-l 3:50,3:50 o-s 3-l 3:50, 3:50. Comprueba si puedes predecir el resultado de la traza. ¿Qué ocurre ocurre cuando se utiliza bandera-I IO EJECUTAR f lag-I IO RUN INMEDIATA frente a la¿MÁS TARDE? ¿Qué ocurre cuando se utiliza la bandera-S SWITCH EN IO frente a-S SWITCH ON FIN?
+**8. Ahora ejecuta con algunos procesos generados aleatoriamente utilizando flags-s 1-l 3:50,3:50 o-s 2-l 3:50,3:50 o-s 3-l 3:50, 3:50. Comprueba si puedes predecir el resultado de la traza. ¿Qué ocurre ocurre cuando se utiliza bandera-I IO EJECUTAR f lag-I IO RUN INMEDIATA frente a la¿MÁS TARDE? ¿Qué ocurre cuando se utiliza la bandera-S SWITCH EN IO frente a-S SWITCH ON FIN?**
    
 python3 process-run.py -s 1 -l 3:50,3:50 -c -p
 python3 process-run.py -s 2 -l 3:50,3:50 -c -p
@@ -83,12 +72,12 @@ python3 process-run.py -s 3 -l 3:50,3:50 -c -p
 
 ![image.png](https://i.postimg.cc/X7x1bW0w/image.png)
 
-Comparar el comportamiento de -I IO RUN IMMEDIATE y -I IO RUN LATER:
+**Comparar el comportamiento de -I IO RUN IMMEDIATE y -I IO RUN LATER:**
 
 python3 process-run.py -s 1 -l 3:50,3:50 -c -p -I IO_RUN_IMMEDIATE
 python3 process-run.py -s 1 -l 3:50,3:50 -c -p -I IO_RUN_LATER
 
-Comparar el comportamiento de -S SWITCH ON IO y -S SWITCH ON END:
+**Comparar el comportamiento de -S SWITCH ON IO y -S SWITCH ON END:**
 
 python3 process-run.py -s 1 -l 3:50,3:50 -c -p -S SWITCH_ON_IO
 python3 process-run.py -s 1 -l 3:50,3:50 -c -p -S SWITCH_ON_END
