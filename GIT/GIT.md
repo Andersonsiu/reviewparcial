@@ -18,6 +18,6 @@ ENTRAR A LA UBICACIÓN
 
 - git pust origin master
   
-- Poner usuario(Andersonsiu)
+- Poner usuario (Andersonsiu)
   
-- Poner token clasic en setting del github(Ir a settings y generar token)
+- Poner token clasic en setting del github (Ir a settings y generar token)
