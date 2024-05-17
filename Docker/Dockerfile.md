@@ -58,3 +58,7 @@ Ahora, podemos construir la imagen exactamente de la misma manera que lo hicimos
 
 - $ docker stop 9b92be34d101
 - $ docker run -d -p 8080:8080 tomcat
+
+**Usar en otra consola el comando "docker exec -it <container_id> curl http://localhost:5000"**
+
+Esto debe permitir probar la conectividad dentro del contenedor sin problemas.
