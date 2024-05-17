@@ -20,11 +20,15 @@ EXPOSE 80 sugiere que el contenedor estará escuchando en el puerto 80.
   
 **-CREA EL DOCKERFILE, ASÍ:**
 
--FROM ubuntu:20.04
--RUN apt-get update && \ 
--apt-get install -y python
--COPY hola.py . 
--ENTRYPOINT ["python", "hola.py"]
+FROM ubuntu:20.04
+
+RUN apt-get update && \ 
+
+apt-get install -y python
+
+COPY hola.py . 
+
+ENTRYPOINT ["python", "hola.py"]
 
 
 **- Construyendo la imagen**
